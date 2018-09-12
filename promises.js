@@ -66,21 +66,18 @@ getNotas(1).then((lasNotas) => {
 })
 
 // crea promesa para obtener el nombre y las notas del opositor1
-const getResultado = (id) => {
-  let opositor
-  return getOpositor(id)
-    .then((data) => {
-      opositor = data
-      return getNotas(opositor.id)
-    })
-    .then((notas) => {
-      let media = 0
+// DEFINIMOS UNA FUNCIÓN ASÍNCRONA Y PODEMOS  UTILIZAR DENTRO UN AWAIT
+const getResultado = async(id) => {
+  // llama a la promesa getOpositor y cuando termine guardalo en la variable "opositor"
+  const opositor = await getOpositor(id)
+  const notas= await getNotas(id)
+
       if (notas.length > 0) {
         // con map me quedo sólo con ciertos campos del objeto, en este caso con el campo "notas"
         media = notas.map((nota) => nota.nota).reduce((a, b) => a + b) / notas.length
       }
       return `${opositor.nombre} tiene una media de ${media} en la oposición de ${opositor.especialidad}`
-    })
+
 }
 
 getResultado(1).then(data=> console.log(data))
