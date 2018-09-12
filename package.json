@@ -1,0 +1,23 @@
+{
+  "name": "curso-node-js-proyecto-promesas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promises.js",
+  "dependencies": {
+    "eslint": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ereducacion/curso-node-js-proyecto-promesas.git"
+  },
+  "author": "Eva <e.r.educacion@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ereducacion/curso-node-js-proyecto-promesas/issues"
+  },
+  "homepage": "https://github.com/ereducacion/curso-node-js-proyecto-promesas#readme"
+}
